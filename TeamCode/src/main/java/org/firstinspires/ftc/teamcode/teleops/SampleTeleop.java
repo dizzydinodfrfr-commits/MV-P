@@ -20,7 +20,7 @@ private DcMotor BR ;
         FR = hardwareMap.get(DcMotor.class,"FR");
         BR = hardwareMap.get(DcMotor.class,"BR");
 
-        // :)
+        // :) & :)
 
         while (opModeIsActive()) {
 
