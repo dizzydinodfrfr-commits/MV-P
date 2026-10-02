@@ -20,8 +20,6 @@ private DcMotor BR ;
         FR = hardwareMap.get(DcMotor.class,"FR");
         BR = hardwareMap.get(DcMotor.class,"BR");
 
-        // :) & :)
-
         while (opModeIsActive()) {
 
             FL.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
