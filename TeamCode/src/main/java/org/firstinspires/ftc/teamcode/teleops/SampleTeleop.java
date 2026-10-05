@@ -5,27 +5,22 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 
 public class SampleTeleop extends LinearOpMode {
-private DcMotor FL ;
-private DcMotor BL ;
-private DcMotor FR ;
-private DcMotor BR ;
 
     @Override
-
     public void runOpMode() throws InterruptedException {
         waitForStart();
 
-        FL = hardwareMap.get(DcMotor.class,"FL");
-        BL = hardwareMap.get(DcMotor.class, "BL");
-        FR = hardwareMap.get(DcMotor.class,"FR");
-        BR = hardwareMap.get(DcMotor.class,"BR");
+        DcMotor FL = hardwareMap.get(DcMotor.class, "FL");
+        DcMotor BL = hardwareMap.get(DcMotor.class, "BL");
+        DcMotor FR = hardwareMap.get(DcMotor.class, "FR");
+        DcMotor BR = hardwareMap.get(DcMotor.class, "BR");
 
         while (opModeIsActive()) {
 
             FL.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
             BL.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
-            FR.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
-            BR.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
+            FR.setPower(gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
+            BR.setPower(gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
 
         }
     }
