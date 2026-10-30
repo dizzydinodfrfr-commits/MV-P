@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 @TeleOp(name="meow main code")
-public class SampleTeleop extends LinearOpMode {
+public class meowTeleop extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -17,14 +17,14 @@ public class SampleTeleop extends LinearOpMode {
         DcMotor FR = hardwareMap.get(DcMotor.class, "FR");
         DcMotor BR = hardwareMap.get(DcMotor.class, "BR");
 //launch motors
-        DcMotor Launch = hardwareMap.get(DcMotor.class, "launch");
-        DcMotor launch2 = hardwareMap.get(DcMotor.class, "launch2");
+        //DcMotor Launch = hardwareMap.get(DcMotor.class, "launch");
+        //DcMotor launch2 = hardwareMap.get(DcMotor.class, "launch2");
 //collection servos
-        CRServo collection = hardwareMap.get(CRServo.class, "collection");
-        CRServo collection2 = hardwareMap.get(CRServo.class, "collection2");
+        //CRServo collection = hardwareMap.get(CRServo.class, "collection");
+        //CRServo collection2 = hardwareMap.get(CRServo.class, "collection2");
 //transport servos
-        CRServo transport = hardwareMap.get(CRServo.class, "transport");
-        CRServo transport2 = hardwareMap.get(CRServo.class, "transport2");
+        //CRServo transport = hardwareMap.get(CRServo.class, "transport");
+        //CRServo transport2 = hardwareMap.get(CRServo.class, "transport2");
 
         while (opModeIsActive()) {
 // movement code (for joysticks)
@@ -32,6 +32,7 @@ public class SampleTeleop extends LinearOpMode {
             BL.setPower(gamepad1.left_stick_y + gamepad1.left_stick_x - gamepad1.right_stick_x);
             FR.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
             BR.setPower(-gamepad1.left_stick_y + gamepad1.left_stick_x - gamepad1.right_stick_x);
+
 
         }
     }
