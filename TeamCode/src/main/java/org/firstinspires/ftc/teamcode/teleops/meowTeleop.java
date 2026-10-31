@@ -41,14 +41,16 @@ public class meowTeleop extends LinearOpMode {
     // Collection
 
         if(gamepad1.aWasPressed()){
-            if(x==0) {
-                collectionM.setPower(1);
-                x=1;
-            }
-            else{
-                collectionM.setPower(0);
-                x=0;
-            }
+            collectionM.setPower(1);
+        }
+
+
+        if(gamepad1.bWasPressed()){
+            collectionM.setPower(-1);
+        }
+
+        if(gamepad1.yWasPressed()){
+            collectionM.setPower(0);
         }
 
 // Controller 2
