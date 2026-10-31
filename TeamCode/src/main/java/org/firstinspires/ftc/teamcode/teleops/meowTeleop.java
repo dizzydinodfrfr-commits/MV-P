@@ -12,8 +12,7 @@ public class meowTeleop extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         waitForStart();
-// variables for checks and stuff
-        int x=0;
+
 //movement motors
         DcMotor FL = hardwareMap.get(DcMotor.class, "FL");
         DcMotor BL = hardwareMap.get(DcMotor.class, "BL");
