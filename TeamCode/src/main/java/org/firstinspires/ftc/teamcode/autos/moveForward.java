@@ -37,6 +37,17 @@ public class moveForward extends LinearOpMode {
             BL.setPower(0);
             FR.setPower(0);
             BR.setPower(0);
+            sleep(1000);
+            FL.setPower(1);
+            BL.setPower(1);
+            FR.setPower(-1);
+            BR.setPower(-1);
+            sleep(1500);
+            FL.setPower(0);
+            BL.setPower(0);
+            FR.setPower(0);
+            BR.setPower(0);
+
 
         }
     }
